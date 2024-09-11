@@ -1,0 +1,1040 @@
+[0m21:06:12.947041 [debug] [MainThread]: Sending event: {'category': 'dbt', 'action': 'invocation', 'label': 'start', 'context': [<snowplow_tracker.self_describing_json.SelfDescribingJson object at 0x7fac711c1460>, <snowplow_tracker.self_describing_json.SelfDescribingJson object at 0x7fac723e2eb0>, <snowplow_tracker.self_describing_json.SelfDescribingJson object at 0x7fac723e2490>]}
+
+
+============================== 21:06:12.950968 | 038e747e-82e4-46a8-8201-f84db0430cf3 ==============================
+[0m21:06:12.950968 [info ] [MainThread]: Running with dbt=1.8.6
+[0m21:06:12.951635 [debug] [MainThread]: running dbt with arguments {'profiles_dir': '/Users/raulvazquez/.dbt', 'log_path': '/Users/raulvazquez/seQura_test/Part2/my_dbt_project/logs', 'fail_fast': 'False', 'debug': 'False', 'target_path': 'None', 'printer_width': '80', 'write_json': 'True', 'introspect': 'True', 'partial_parse': 'True', 'warn_error_options': 'WarnErrorOptions(include=[], exclude=[])', 'static_parser': 'True', 'quiet': 'False', 'log_format': 'default', 'log_cache_events': 'False', 'send_anonymous_usage_stats': 'True', 'warn_error': 'None', 'cache_selected_only': 'False', 'use_experimental_parser': 'False', 'version_check': 'True', 'no_print': 'None', 'indirect_selection': 'eager', 'empty': 'False', 'use_colors': 'True', 'invocation_command': 'dbt run'}
+[0m21:06:14.654238 [debug] [MainThread]: Sending event: {'category': 'dbt', 'action': 'project_id', 'label': '038e747e-82e4-46a8-8201-f84db0430cf3', 'context': [<snowplow_tracker.self_describing_json.SelfDescribingJson object at 0x7fac75425070>]}
+[0m21:06:14.693008 [debug] [MainThread]: Sending event: {'category': 'dbt', 'action': 'adapter_info', 'label': '038e747e-82e4-46a8-8201-f84db0430cf3', 'context': [<snowplow_tracker.self_describing_json.SelfDescribingJson object at 0x7fac75402400>]}
+[0m21:06:14.693545 [info ] [MainThread]: Registered adapter: bigquery=1.8.2
+[0m21:06:14.728170 [debug] [MainThread]: checksum: 2f2fb10c73cafe3e79aa104295a8244291492b32b5598ce46af770f7d0bd5194, vars: {}, profile: , target: , version: 1.8.6
+[0m21:06:14.919417 [debug] [MainThread]: Partial parsing enabled: 0 files deleted, 0 files added, 1 files changed.
+[0m21:06:14.919998 [debug] [MainThread]: Partial parsing: updated file: my_dbt_project://models/intermediate/intermediate_loans_mora_analysis.sql
+[0m21:06:15.103169 [debug] [MainThread]: Sending event: {'category': 'dbt', 'action': 'load_project', 'label': '038e747e-82e4-46a8-8201-f84db0430cf3', 'context': [<snowplow_tracker.self_describing_json.SelfDescribingJson object at 0x7fac755e3130>]}
+[0m21:06:15.197997 [debug] [MainThread]: Sending event: {'category': 'dbt', 'action': 'resource_counts', 'label': '038e747e-82e4-46a8-8201-f84db0430cf3', 'context': [<snowplow_tracker.self_describing_json.SelfDescribingJson object at 0x7fac756157f0>]}
+[0m21:06:15.198532 [info ] [MainThread]: Found 7 models, 6 data tests, 5 sources, 473 macros
+[0m21:06:15.198838 [debug] [MainThread]: Sending event: {'category': 'dbt', 'action': 'runnable_timing', 'label': '038e747e-82e4-46a8-8201-f84db0430cf3', 'context': [<snowplow_tracker.self_describing_json.SelfDescribingJson object at 0x7fac7558fee0>]}
+[0m21:06:15.200179 [info ] [MainThread]: 
+[0m21:06:15.200746 [debug] [MainThread]: Acquiring new bigquery connection 'master'
+[0m21:06:15.204628 [debug] [ThreadPool]: Acquiring new bigquery connection 'list_burnished-flare-384310'
+[0m21:06:15.205189 [debug] [ThreadPool]: Opening a new connection, currently in state init
+[0m21:06:15.582120 [debug] [ThreadPool]: Re-using an available connection from the pool (formerly list_burnished-flare-384310, now list_burnished-flare-384310_seQura_dbt)
+[0m21:06:15.583604 [debug] [ThreadPool]: Opening a new connection, currently in state closed
+[0m21:06:15.940274 [debug] [MainThread]: Sending event: {'category': 'dbt', 'action': 'runnable_timing', 'label': '038e747e-82e4-46a8-8201-f84db0430cf3', 'context': [<snowplow_tracker.self_describing_json.SelfDescribingJson object at 0x7fac713a2d30>]}
+[0m21:06:15.941931 [info ] [MainThread]: Concurrency: 4 threads (target='dev')
+[0m21:06:15.942677 [info ] [MainThread]: 
+[0m21:06:15.949028 [debug] [Thread-1  ]: Began running node model.my_dbt_project.stg_dim_shoppers
+[0m21:06:15.949922 [debug] [Thread-2  ]: Began running node model.my_dbt_project.stg_merchants
+[0m21:06:15.951123 [debug] [Thread-3  ]: Began running node model.my_dbt_project.stg_orders
+[0m21:06:15.952442 [debug] [Thread-4  ]: Began running node model.my_dbt_project.stg_product
+[0m21:06:15.953556 [info ] [Thread-1  ]: 1 of 7 START sql view model seQura_dbt.stg_dim_shoppers ........................ [RUN]
+[0m21:06:15.954471 [info ] [Thread-2  ]: 2 of 7 START sql view model seQura_dbt.stg_merchants ........................... [RUN]
+[0m21:06:15.955221 [info ] [Thread-3  ]: 3 of 7 START sql view model seQura_dbt.stg_orders .............................. [RUN]
+[0m21:06:15.955949 [info ] [Thread-4  ]: 4 of 7 START sql view model seQura_dbt.stg_product ............................. [RUN]
+[0m21:06:15.956756 [debug] [Thread-1  ]: Re-using an available connection from the pool (formerly list_burnished-flare-384310_seQura_dbt, now model.my_dbt_project.stg_dim_shoppers)
+[0m21:06:15.957505 [debug] [Thread-2  ]: Acquiring new bigquery connection 'model.my_dbt_project.stg_merchants'
+[0m21:06:15.958158 [debug] [Thread-3  ]: Acquiring new bigquery connection 'model.my_dbt_project.stg_orders'
+[0m21:06:15.958787 [debug] [Thread-4  ]: Acquiring new bigquery connection 'model.my_dbt_project.stg_product'
+[0m21:06:15.959328 [debug] [Thread-1  ]: Began compiling node model.my_dbt_project.stg_dim_shoppers
+[0m21:06:15.960405 [debug] [Thread-2  ]: Began compiling node model.my_dbt_project.stg_merchants
+[0m21:06:15.961240 [debug] [Thread-3  ]: Began compiling node model.my_dbt_project.stg_orders
+[0m21:06:15.961717 [debug] [Thread-4  ]: Began compiling node model.my_dbt_project.stg_product
+[0m21:06:15.972899 [debug] [Thread-1  ]: Writing injected SQL for node "model.my_dbt_project.stg_dim_shoppers"
+[0m21:06:15.976859 [debug] [Thread-2  ]: Writing injected SQL for node "model.my_dbt_project.stg_merchants"
+[0m21:06:15.982450 [debug] [Thread-4  ]: Writing injected SQL for node "model.my_dbt_project.stg_product"
+[0m21:06:15.988521 [debug] [Thread-3  ]: Writing injected SQL for node "model.my_dbt_project.stg_orders"
+[0m21:06:15.989531 [debug] [Thread-1  ]: Began executing node model.my_dbt_project.stg_dim_shoppers
+[0m21:06:16.008444 [debug] [Thread-3  ]: Began executing node model.my_dbt_project.stg_orders
+[0m21:06:16.014167 [debug] [Thread-4  ]: Began executing node model.my_dbt_project.stg_product
+[0m21:06:16.018325 [debug] [Thread-1  ]: Writing runtime sql for node "model.my_dbt_project.stg_dim_shoppers"
+[0m21:06:16.018694 [debug] [Thread-2  ]: Began executing node model.my_dbt_project.stg_merchants
+[0m21:06:16.021366 [debug] [Thread-3  ]: Writing runtime sql for node "model.my_dbt_project.stg_orders"
+[0m21:06:16.023726 [debug] [Thread-4  ]: Writing runtime sql for node "model.my_dbt_project.stg_product"
+[0m21:06:16.026185 [debug] [Thread-2  ]: Writing runtime sql for node "model.my_dbt_project.stg_merchants"
+[0m21:06:16.026648 [debug] [Thread-1  ]: Opening a new connection, currently in state closed
+[0m21:06:16.027101 [debug] [Thread-3  ]: Opening a new connection, currently in state init
+[0m21:06:16.027525 [debug] [Thread-4  ]: Opening a new connection, currently in state init
+[0m21:06:16.028147 [debug] [Thread-2  ]: Opening a new connection, currently in state init
+[0m21:06:16.034290 [debug] [Thread-4  ]: On model.my_dbt_project.stg_product: /* {"app": "dbt", "dbt_version": "1.8.6", "profile_name": "my_dbt_project", "target_name": "dev", "node_id": "model.my_dbt_project.stg_product"} */
+
+
+  create or replace view `burnished-flare-384310`.`seQura_dbt`.`stg_product`
+  OPTIONS()
+  as 
+
+SELECT 
+    product_id,
+    product_name
+FROM `burnished-flare-384310`.`seQura_dbt`.`products`;
+
+
+[0m21:06:16.034823 [debug] [Thread-2  ]: On model.my_dbt_project.stg_merchants: /* {"app": "dbt", "dbt_version": "1.8.6", "profile_name": "my_dbt_project", "target_name": "dev", "node_id": "model.my_dbt_project.stg_merchants"} */
+
+
+  create or replace view `burnished-flare-384310`.`seQura_dbt`.`stg_merchants`
+  OPTIONS()
+  as 
+
+SELECT 
+    merchant_id,
+    merchant_name
+FROM `burnished-flare-384310`.`seQura_dbt`.`merchants`;
+
+
+[0m21:06:16.035270 [debug] [Thread-3  ]: On model.my_dbt_project.stg_orders: /* {"app": "dbt", "dbt_version": "1.8.6", "profile_name": "my_dbt_project", "target_name": "dev", "node_id": "model.my_dbt_project.stg_orders"} */
+
+
+  create or replace view `burnished-flare-384310`.`seQura_dbt`.`stg_orders`
+  OPTIONS()
+  as 
+
+WITH raw_orders AS (
+    SELECT 
+        order_id,
+        shopper_id,
+        order_date,
+        product_id,
+        merchant_id,
+        is_in_default,
+        days_unbalanced,
+        current_order_value,
+        overdue_principal,
+        overdue_fees
+    FROM `burnished-flare-384310`.`seQura_dbt`.`orders`
+)
+
+SELECT 
+    *,
+    overdue_principal + overdue_fees AS total_overdue 
+FROM raw_orders
+WHERE current_order_value IS NOT NULL;
+
+
+[0m21:06:16.035778 [debug] [Thread-1  ]: On model.my_dbt_project.stg_dim_shoppers: /* {"app": "dbt", "dbt_version": "1.8.6", "profile_name": "my_dbt_project", "target_name": "dev", "node_id": "model.my_dbt_project.stg_dim_shoppers"} */
+
+
+  create or replace view `burnished-flare-384310`.`seQura_dbt`.`stg_dim_shoppers`
+  OPTIONS()
+  as 
+
+SELECT 
+    shopper_id,
+    age
+FROM `burnished-flare-384310`.`seQura_dbt`.`dim_shoppers`;
+
+
+[0m21:06:16.638488 [debug] [Thread-3  ]: BigQuery adapter: https://console.cloud.google.com/bigquery?project=burnished-flare-384310&j=bq:EU:8846d6bc-16d7-4315-b1b9-aeb49b767d40&page=queryresults
+[0m21:06:16.640255 [debug] [Thread-1  ]: BigQuery adapter: https://console.cloud.google.com/bigquery?project=burnished-flare-384310&j=bq:EU:914fa11b-0015-4326-bae2-19a364d1da52&page=queryresults
+[0m21:06:16.641548 [debug] [Thread-2  ]: BigQuery adapter: https://console.cloud.google.com/bigquery?project=burnished-flare-384310&j=bq:EU:99af5cc1-40df-4695-a5f2-145e381a655d&page=queryresults
+[0m21:06:16.658404 [debug] [Thread-4  ]: BigQuery adapter: https://console.cloud.google.com/bigquery?project=burnished-flare-384310&j=bq:EU:8bf53498-c8b2-46d3-9776-ffbc067afeb3&page=queryresults
+[0m21:06:17.017534 [debug] [Thread-1  ]: Sending event: {'category': 'dbt', 'action': 'run_model', 'label': '038e747e-82e4-46a8-8201-f84db0430cf3', 'context': [<snowplow_tracker.self_describing_json.SelfDescribingJson object at 0x7faca092fcd0>]}
+[0m21:06:17.018348 [debug] [Thread-4  ]: Sending event: {'category': 'dbt', 'action': 'run_model', 'label': '038e747e-82e4-46a8-8201-f84db0430cf3', 'context': [<snowplow_tracker.self_describing_json.SelfDescribingJson object at 0x7faca0938490>]}
+[0m21:06:17.019667 [info ] [Thread-1  ]: 1 of 7 OK created sql view model seQura_dbt.stg_dim_shoppers ................... [[32mCREATE VIEW (0 processed)[0m in 1.06s]
+[0m21:06:17.022278 [debug] [Thread-2  ]: Sending event: {'category': 'dbt', 'action': 'run_model', 'label': '038e747e-82e4-46a8-8201-f84db0430cf3', 'context': [<snowplow_tracker.self_describing_json.SelfDescribingJson object at 0x7faca092fe50>]}
+[0m21:06:17.023150 [info ] [Thread-4  ]: 4 of 7 OK created sql view model seQura_dbt.stg_product ........................ [[32mCREATE VIEW (0 processed)[0m in 1.06s]
+[0m21:06:17.023961 [debug] [Thread-1  ]: Finished running node model.my_dbt_project.stg_dim_shoppers
+[0m21:06:17.024624 [info ] [Thread-2  ]: 2 of 7 OK created sql view model seQura_dbt.stg_merchants ...................... [[32mCREATE VIEW (0 processed)[0m in 1.06s]
+[0m21:06:17.025248 [debug] [Thread-4  ]: Finished running node model.my_dbt_project.stg_product
+[0m21:06:17.025737 [debug] [Thread-1  ]: Began running node model.my_dbt_project.stg_rel_default_order_type
+[0m21:06:17.026268 [debug] [Thread-2  ]: Finished running node model.my_dbt_project.stg_merchants
+[0m21:06:17.026946 [info ] [Thread-1  ]: 5 of 7 START sql view model seQura_dbt.stg_rel_default_order_type .............. [RUN]
+[0m21:06:17.027551 [debug] [Thread-1  ]: Re-using an available connection from the pool (formerly model.my_dbt_project.stg_dim_shoppers, now model.my_dbt_project.stg_rel_default_order_type)
+[0m21:06:17.027952 [debug] [Thread-1  ]: Began compiling node model.my_dbt_project.stg_rel_default_order_type
+[0m21:06:17.031171 [debug] [Thread-1  ]: Writing injected SQL for node "model.my_dbt_project.stg_rel_default_order_type"
+[0m21:06:17.031828 [debug] [Thread-1  ]: Began executing node model.my_dbt_project.stg_rel_default_order_type
+[0m21:06:17.034848 [debug] [Thread-1  ]: Writing runtime sql for node "model.my_dbt_project.stg_rel_default_order_type"
+[0m21:06:17.035498 [debug] [Thread-1  ]: Opening a new connection, currently in state closed
+[0m21:06:17.042613 [debug] [Thread-1  ]: On model.my_dbt_project.stg_rel_default_order_type: /* {"app": "dbt", "dbt_version": "1.8.6", "profile_name": "my_dbt_project", "target_name": "dev", "node_id": "model.my_dbt_project.stg_rel_default_order_type"} */
+
+
+  create or replace view `burnished-flare-384310`.`seQura_dbt`.`stg_rel_default_order_type`
+  OPTIONS()
+  as 
+
+SELECT 
+    default_type_id,
+    order_id,
+    default_type
+FROM `burnished-flare-384310`.`seQura_dbt`.`rel_default_order_type`;
+
+
+[0m21:06:17.130082 [debug] [Thread-3  ]: Sending event: {'category': 'dbt', 'action': 'run_model', 'label': '038e747e-82e4-46a8-8201-f84db0430cf3', 'context': [<snowplow_tracker.self_describing_json.SelfDescribingJson object at 0x7fac755b0100>]}
+[0m21:06:17.130886 [info ] [Thread-3  ]: 3 of 7 OK created sql view model seQura_dbt.stg_orders ......................... [[32mCREATE VIEW (0 processed)[0m in 1.17s]
+[0m21:06:17.131555 [debug] [Thread-3  ]: Finished running node model.my_dbt_project.stg_orders
+[0m21:06:17.660387 [debug] [Thread-1  ]: BigQuery adapter: https://console.cloud.google.com/bigquery?project=burnished-flare-384310&j=bq:EU:864c194e-1713-4cb9-bf98-d23c744a870a&page=queryresults
+[0m21:06:18.144028 [debug] [Thread-1  ]: Sending event: {'category': 'dbt', 'action': 'run_model', 'label': '038e747e-82e4-46a8-8201-f84db0430cf3', 'context': [<snowplow_tracker.self_describing_json.SelfDescribingJson object at 0x7fac71dce520>]}
+[0m21:06:18.145691 [info ] [Thread-1  ]: 5 of 7 OK created sql view model seQura_dbt.stg_rel_default_order_type ......... [[32mCREATE VIEW (0 processed)[0m in 1.12s]
+[0m21:06:18.147114 [debug] [Thread-1  ]: Finished running node model.my_dbt_project.stg_rel_default_order_type
+[0m21:06:18.149422 [debug] [Thread-4  ]: Began running node model.my_dbt_project.intermediate_loans_mora_analysis
+[0m21:06:18.150528 [info ] [Thread-4  ]: 6 of 7 START sql view model seQura_dbt.intermediate_loans_mora_analysis ........ [RUN]
+[0m21:06:18.151500 [debug] [Thread-4  ]: Re-using an available connection from the pool (formerly model.my_dbt_project.stg_product, now model.my_dbt_project.intermediate_loans_mora_analysis)
+[0m21:06:18.152214 [debug] [Thread-4  ]: Began compiling node model.my_dbt_project.intermediate_loans_mora_analysis
+[0m21:06:18.160088 [debug] [Thread-4  ]: Writing injected SQL for node "model.my_dbt_project.intermediate_loans_mora_analysis"
+[0m21:06:18.161422 [debug] [Thread-4  ]: Began executing node model.my_dbt_project.intermediate_loans_mora_analysis
+[0m21:06:18.165670 [debug] [Thread-4  ]: Writing runtime sql for node "model.my_dbt_project.intermediate_loans_mora_analysis"
+[0m21:06:18.166573 [debug] [Thread-4  ]: Opening a new connection, currently in state closed
+[0m21:06:18.176265 [debug] [Thread-4  ]: On model.my_dbt_project.intermediate_loans_mora_analysis: /* {"app": "dbt", "dbt_version": "1.8.6", "profile_name": "my_dbt_project", "target_name": "dev", "node_id": "model.my_dbt_project.intermediate_loans_mora_analysis"} */
+
+
+  create or replace view `burnished-flare-384310`.`seQura_dbt`.`intermediate_loans_mora_analysis`
+  OPTIONS()
+  as 
+
+WITH arrears_data AS (
+    -- Extraemos los datos necesarios de la tabla de orders
+    SELECT
+        o.order_id,
+        o.shopper_id,
+        s.age AS shopper_age, 
+        o.merchant_id,
+        m.merchant_name AS merchant,
+        p.product_name AS product,
+        r.default_type,
+        o.order_date,
+        FORMAT_DATE('%Y-%m', PARSE_DATE('%Y-%m-%d', o.order_date)) AS month_year_order,
+        o.current_order_value,
+        o.total_overdue,
+        o.days_unbalanced
+    FROM `burnished-flare-384310`.`seQura_dbt`.`stg_orders` o
+    LEFT JOIN `burnished-flare-384310`.`seQura_dbt`.`stg_dim_shoppers` s ON o.shopper_id = s.shopper_id
+    LEFT JOIN `burnished-flare-384310`.`seQura_dbt`.`stg_merchants` m ON o.merchant_id = m.merchant_id
+    LEFT JOIN `burnished-flare-384310`.`seQura_dbt`.`stg_product` p ON o.product_id = p.product_id
+    LEFT JOIN `burnished-flare-384310`.`seQura_dbt`.`stg_rel_default_order_type` r ON o.order_id = r.order_id
+    WHERE o.days_unbalanced >= 17  -- Solo consideramos órdenes con mora
+),
+
+expanded_periods AS (
+    -- Generamos una fila para cada `order_id` en función de sus niveles de mora
+    SELECT 
+        order_id,
+        shopper_id,
+        shopper_age,
+        merchant_id,
+        merchant,
+        product,
+        default_type,
+        order_date,
+        month_year_order,
+        current_order_value,
+        total_overdue,
+        days_unbalanced,
+        '17 days' AS delayed_period
+    FROM arrears_data
+    WHERE days_unbalanced >= 17
+
+    UNION ALL
+
+    SELECT 
+        order_id,
+        shopper_id,
+        shopper_age,
+        merchant_id,
+        merchant,
+        product,
+        default_type,
+        order_date,
+        month_year_order,
+        current_order_value,
+        total_overdue,
+        days_unbalanced,
+        '30 days' AS delayed_period
+    FROM arrears_data
+    WHERE days_unbalanced >= 30
+
+    UNION ALL
+
+    SELECT 
+        order_id,
+        shopper_id,
+        shopper_age,
+        merchant_id,
+        merchant,
+        product,
+        default_type,
+        order_date,
+        month_year_order,
+        current_order_value,
+        total_overdue,
+        days_unbalanced,
+        '60 days' AS delayed_period
+    FROM arrears_data
+    WHERE days_unbalanced >= 60
+
+    UNION ALL
+
+    SELECT 
+        order_id,
+        shopper_id,
+        shopper_age,
+        merchant_id,
+        merchant,
+        product,
+        default_type,
+        order_date,
+        month_year_order,
+        current_order_value,
+        total_overdue,
+        days_unbalanced,
+        '90 days' AS delayed_period
+    FROM arrears_data
+    WHERE days_unbalanced >= 90
+)
+
+SELECT 
+    order_id,
+    shopper_id,
+    shopper_age,
+    merchant_id,
+    merchant,
+    product,
+    default_type,
+    order_date,
+    month_year_order,
+    current_order_value,
+    total_overdue,
+    days_unbalanced,
+    delayed_period
+FROM expanded_periods
+ORDER BY order_id, delayed_period;
+
+
+[0m21:06:18.878823 [debug] [Thread-4  ]: BigQuery adapter: https://console.cloud.google.com/bigquery?project=burnished-flare-384310&j=bq:EU:ae84843b-e5ca-4b92-8770-0c657da560df&page=queryresults
+[0m21:06:19.078339 [debug] [Thread-4  ]: BigQuery adapter: Retry attempt 1 of 1 after error: BadRequest('No matching signature for function PARSE_DATE for argument types: STRING, DATE. Supported signature: PARSE_DATE(STRING, STRING) at [19:30]; reason: invalidQuery, location: query, message: No matching signature for function PARSE_DATE for argument types: STRING, DATE. Supported signature: PARSE_DATE(STRING, STRING) at [19:30]')
+[0m21:06:20.321916 [debug] [Thread-4  ]: BigQuery adapter: https://console.cloud.google.com/bigquery?project=burnished-flare-384310&j=bq:EU:008b7674-b986-4a27-aa11-663e49a6c626&page=queryresults
+[0m21:06:20.446486 [error] [Thread-4  ]: BigQuery adapter: https://console.cloud.google.com/bigquery?project=burnished-flare-384310&j=bq:EU:008b7674-b986-4a27-aa11-663e49a6c626&page=queryresults
+[0m21:06:20.458565 [debug] [Thread-4  ]: Database Error in model intermediate_loans_mora_analysis (models/intermediate/intermediate_loans_mora_analysis.sql)
+  No matching signature for function PARSE_DATE for argument types: STRING, DATE. Supported signature: PARSE_DATE(STRING, STRING) at [19:30]
+  compiled Code at target/run/my_dbt_project/models/intermediate/intermediate_loans_mora_analysis.sql
+[0m21:06:20.459765 [debug] [Thread-4  ]: Sending event: {'category': 'dbt', 'action': 'run_model', 'label': '038e747e-82e4-46a8-8201-f84db0430cf3', 'context': [<snowplow_tracker.self_describing_json.SelfDescribingJson object at 0x7faca09f9460>]}
+[0m21:06:20.461022 [error] [Thread-4  ]: 6 of 7 ERROR creating sql view model seQura_dbt.intermediate_loans_mora_analysis  [[31mERROR[0m in 2.31s]
+[0m21:06:20.462102 [debug] [Thread-4  ]: Finished running node model.my_dbt_project.intermediate_loans_mora_analysis
+[0m21:06:20.463790 [debug] [Thread-3  ]: Began running node model.my_dbt_project.final_loans_mora_analysis
+[0m21:06:20.465048 [info ] [Thread-3  ]: 7 of 7 SKIP relation seQura_dbt.final_loans_mora_analysis ...................... [[33mSKIP[0m]
+[0m21:06:20.465903 [debug] [Thread-3  ]: Finished running node model.my_dbt_project.final_loans_mora_analysis
+[0m21:06:20.467881 [debug] [MainThread]: Connection 'master' was properly closed.
+[0m21:06:20.468389 [debug] [MainThread]: Connection 'model.my_dbt_project.stg_rel_default_order_type' was properly closed.
+[0m21:06:20.468788 [debug] [MainThread]: Connection 'model.my_dbt_project.stg_merchants' was properly closed.
+[0m21:06:20.469171 [debug] [MainThread]: Connection 'model.my_dbt_project.stg_orders' was properly closed.
+[0m21:06:20.469568 [debug] [MainThread]: Connection 'model.my_dbt_project.intermediate_loans_mora_analysis' was properly closed.
+[0m21:06:20.470210 [info ] [MainThread]: 
+[0m21:06:20.470800 [info ] [MainThread]: Finished running 7 view models in 0 hours 0 minutes and 5.27 seconds (5.27s).
+[0m21:06:20.473236 [debug] [MainThread]: Command end result
+[0m21:06:20.512957 [info ] [MainThread]: 
+[0m21:06:20.513499 [info ] [MainThread]: [31mCompleted with 1 error and 0 warnings:[0m
+[0m21:06:20.513804 [info ] [MainThread]: 
+[0m21:06:20.514265 [error] [MainThread]:   Database Error in model intermediate_loans_mora_analysis (models/intermediate/intermediate_loans_mora_analysis.sql)
+  No matching signature for function PARSE_DATE for argument types: STRING, DATE. Supported signature: PARSE_DATE(STRING, STRING) at [19:30]
+  compiled Code at target/run/my_dbt_project/models/intermediate/intermediate_loans_mora_analysis.sql
+[0m21:06:20.514618 [info ] [MainThread]: 
+[0m21:06:20.515050 [info ] [MainThread]: Done. PASS=5 WARN=0 ERROR=1 SKIP=1 TOTAL=7
+[0m21:06:20.515596 [debug] [MainThread]: Resource report: {"command_name": "run", "command_wall_clock_time": 7.6567354, "process_user_time": 3.557489, "process_kernel_time": 1.633483, "process_mem_max_rss": "236797952", "command_success": false, "process_in_blocks": "0", "process_out_blocks": "0"}
+[0m21:06:20.516138 [debug] [MainThread]: Command `dbt run` failed at 21:06:20.516053 after 7.66 seconds
+[0m21:06:20.516541 [debug] [MainThread]: Sending event: {'category': 'dbt', 'action': 'invocation', 'label': 'end', 'context': [<snowplow_tracker.self_describing_json.SelfDescribingJson object at 0x7fac711c1460>, <snowplow_tracker.self_describing_json.SelfDescribingJson object at 0x7faca0854790>, <snowplow_tracker.self_describing_json.SelfDescribingJson object at 0x7fac755ff1c0>]}
+[0m21:06:20.516900 [debug] [MainThread]: Flushing usage events
+[0m21:07:08.827852 [debug] [MainThread]: Sending event: {'category': 'dbt', 'action': 'invocation', 'label': 'start', 'context': [<snowplow_tracker.self_describing_json.SelfDescribingJson object at 0x7f8068ef0430>, <snowplow_tracker.self_describing_json.SelfDescribingJson object at 0x7f8038243e20>, <snowplow_tracker.self_describing_json.SelfDescribingJson object at 0x7f8038243460>]}
+
+
+============================== 21:07:08.832276 | 067c9b71-aba6-4d4d-ae08-9f9c77a61243 ==============================
+[0m21:07:08.832276 [info ] [MainThread]: Running with dbt=1.8.6
+[0m21:07:08.832915 [debug] [MainThread]: running dbt with arguments {'log_path': '/Users/raulvazquez/seQura_test/Part2/my_dbt_project/logs', 'fail_fast': 'False', 'printer_width': '80', 'indirect_selection': 'eager', 'invocation_command': 'dbt run', 'write_json': 'True', 'debug': 'False', 'no_print': 'None', 'static_parser': 'True', 'version_check': 'True', 'introspect': 'True', 'log_format': 'default', 'profiles_dir': '/Users/raulvazquez/.dbt', 'log_cache_events': 'False', 'send_anonymous_usage_stats': 'True', 'quiet': 'False', 'cache_selected_only': 'False', 'warn_error_options': 'WarnErrorOptions(include=[], exclude=[])', 'partial_parse': 'True', 'warn_error': 'None', 'use_experimental_parser': 'False', 'empty': 'False', 'use_colors': 'True', 'target_path': 'None'}
+[0m21:07:10.085310 [debug] [MainThread]: Sending event: {'category': 'dbt', 'action': 'project_id', 'label': '067c9b71-aba6-4d4d-ae08-9f9c77a61243', 'context': [<snowplow_tracker.self_describing_json.SelfDescribingJson object at 0x7f806c7d2700>]}
+[0m21:07:10.122246 [debug] [MainThread]: Sending event: {'category': 'dbt', 'action': 'adapter_info', 'label': '067c9b71-aba6-4d4d-ae08-9f9c77a61243', 'context': [<snowplow_tracker.self_describing_json.SelfDescribingJson object at 0x7f806d14d1f0>]}
+[0m21:07:10.122758 [info ] [MainThread]: Registered adapter: bigquery=1.8.2
+[0m21:07:10.159941 [debug] [MainThread]: checksum: 2f2fb10c73cafe3e79aa104295a8244291492b32b5598ce46af770f7d0bd5194, vars: {}, profile: , target: , version: 1.8.6
+[0m21:07:10.347765 [debug] [MainThread]: Partial parsing enabled: 0 files deleted, 0 files added, 1 files changed.
+[0m21:07:10.348380 [debug] [MainThread]: Partial parsing: updated file: my_dbt_project://models/intermediate/intermediate_loans_mora_analysis.sql
+[0m21:07:10.530760 [debug] [MainThread]: Sending event: {'category': 'dbt', 'action': 'load_project', 'label': '067c9b71-aba6-4d4d-ae08-9f9c77a61243', 'context': [<snowplow_tracker.self_describing_json.SelfDescribingJson object at 0x7f8058d2c130>]}
+[0m21:07:10.620988 [debug] [MainThread]: Sending event: {'category': 'dbt', 'action': 'resource_counts', 'label': '067c9b71-aba6-4d4d-ae08-9f9c77a61243', 'context': [<snowplow_tracker.self_describing_json.SelfDescribingJson object at 0x7f8058d5de50>]}
+[0m21:07:10.621491 [info ] [MainThread]: Found 7 models, 6 data tests, 5 sources, 473 macros
+[0m21:07:10.621799 [debug] [MainThread]: Sending event: {'category': 'dbt', 'action': 'runnable_timing', 'label': '067c9b71-aba6-4d4d-ae08-9f9c77a61243', 'context': [<snowplow_tracker.self_describing_json.SelfDescribingJson object at 0x7f806d264d30>]}
+[0m21:07:10.623140 [info ] [MainThread]: 
+[0m21:07:10.623730 [debug] [MainThread]: Acquiring new bigquery connection 'master'
+[0m21:07:10.627682 [debug] [ThreadPool]: Acquiring new bigquery connection 'list_burnished-flare-384310'
+[0m21:07:10.628123 [debug] [ThreadPool]: Opening a new connection, currently in state init
+[0m21:07:11.150003 [debug] [ThreadPool]: Re-using an available connection from the pool (formerly list_burnished-flare-384310, now list_burnished-flare-384310_seQura_dbt)
+[0m21:07:11.151303 [debug] [ThreadPool]: Opening a new connection, currently in state closed
+[0m21:07:11.527842 [debug] [MainThread]: Sending event: {'category': 'dbt', 'action': 'runnable_timing', 'label': '067c9b71-aba6-4d4d-ae08-9f9c77a61243', 'context': [<snowplow_tracker.self_describing_json.SelfDescribingJson object at 0x7f804823cdf0>]}
+[0m21:07:11.529363 [info ] [MainThread]: Concurrency: 4 threads (target='dev')
+[0m21:07:11.530090 [info ] [MainThread]: 
+[0m21:07:11.536472 [debug] [Thread-1  ]: Began running node model.my_dbt_project.stg_dim_shoppers
+[0m21:07:11.537286 [debug] [Thread-2  ]: Began running node model.my_dbt_project.stg_merchants
+[0m21:07:11.538222 [debug] [Thread-3  ]: Began running node model.my_dbt_project.stg_orders
+[0m21:07:11.539244 [debug] [Thread-4  ]: Began running node model.my_dbt_project.stg_product
+[0m21:07:11.540467 [info ] [Thread-1  ]: 1 of 7 START sql view model seQura_dbt.stg_dim_shoppers ........................ [RUN]
+[0m21:07:11.541575 [info ] [Thread-2  ]: 2 of 7 START sql view model seQura_dbt.stg_merchants ........................... [RUN]
+[0m21:07:11.542427 [info ] [Thread-3  ]: 3 of 7 START sql view model seQura_dbt.stg_orders .............................. [RUN]
+[0m21:07:11.543219 [info ] [Thread-4  ]: 4 of 7 START sql view model seQura_dbt.stg_product ............................. [RUN]
+[0m21:07:11.544128 [debug] [Thread-1  ]: Re-using an available connection from the pool (formerly list_burnished-flare-384310_seQura_dbt, now model.my_dbt_project.stg_dim_shoppers)
+[0m21:07:11.544975 [debug] [Thread-2  ]: Acquiring new bigquery connection 'model.my_dbt_project.stg_merchants'
+[0m21:07:11.545641 [debug] [Thread-3  ]: Acquiring new bigquery connection 'model.my_dbt_project.stg_orders'
+[0m21:07:11.546322 [debug] [Thread-4  ]: Acquiring new bigquery connection 'model.my_dbt_project.stg_product'
+[0m21:07:11.546907 [debug] [Thread-1  ]: Began compiling node model.my_dbt_project.stg_dim_shoppers
+[0m21:07:11.547408 [debug] [Thread-2  ]: Began compiling node model.my_dbt_project.stg_merchants
+[0m21:07:11.547897 [debug] [Thread-3  ]: Began compiling node model.my_dbt_project.stg_orders
+[0m21:07:11.548434 [debug] [Thread-4  ]: Began compiling node model.my_dbt_project.stg_product
+[0m21:07:11.560153 [debug] [Thread-1  ]: Writing injected SQL for node "model.my_dbt_project.stg_dim_shoppers"
+[0m21:07:11.563776 [debug] [Thread-2  ]: Writing injected SQL for node "model.my_dbt_project.stg_merchants"
+[0m21:07:11.569266 [debug] [Thread-4  ]: Writing injected SQL for node "model.my_dbt_project.stg_product"
+[0m21:07:11.575244 [debug] [Thread-3  ]: Writing injected SQL for node "model.my_dbt_project.stg_orders"
+[0m21:07:11.575876 [debug] [Thread-1  ]: Began executing node model.my_dbt_project.stg_dim_shoppers
+[0m21:07:11.576348 [debug] [Thread-2  ]: Began executing node model.my_dbt_project.stg_merchants
+[0m21:07:11.602855 [debug] [Thread-1  ]: Writing runtime sql for node "model.my_dbt_project.stg_dim_shoppers"
+[0m21:07:11.605858 [debug] [Thread-2  ]: Writing runtime sql for node "model.my_dbt_project.stg_merchants"
+[0m21:07:11.606220 [debug] [Thread-3  ]: Began executing node model.my_dbt_project.stg_orders
+[0m21:07:11.606539 [debug] [Thread-4  ]: Began executing node model.my_dbt_project.stg_product
+[0m21:07:11.609562 [debug] [Thread-3  ]: Writing runtime sql for node "model.my_dbt_project.stg_orders"
+[0m21:07:11.609950 [debug] [Thread-1  ]: Opening a new connection, currently in state closed
+[0m21:07:11.610296 [debug] [Thread-2  ]: Opening a new connection, currently in state init
+[0m21:07:11.612801 [debug] [Thread-4  ]: Writing runtime sql for node "model.my_dbt_project.stg_product"
+[0m21:07:11.613436 [debug] [Thread-3  ]: Opening a new connection, currently in state init
+[0m21:07:11.614184 [debug] [Thread-4  ]: Opening a new connection, currently in state init
+[0m21:07:11.619909 [debug] [Thread-2  ]: On model.my_dbt_project.stg_merchants: /* {"app": "dbt", "dbt_version": "1.8.6", "profile_name": "my_dbt_project", "target_name": "dev", "node_id": "model.my_dbt_project.stg_merchants"} */
+
+
+  create or replace view `burnished-flare-384310`.`seQura_dbt`.`stg_merchants`
+  OPTIONS()
+  as 
+
+SELECT 
+    merchant_id,
+    merchant_name
+FROM `burnished-flare-384310`.`seQura_dbt`.`merchants`;
+
+
+[0m21:07:11.620347 [debug] [Thread-4  ]: On model.my_dbt_project.stg_product: /* {"app": "dbt", "dbt_version": "1.8.6", "profile_name": "my_dbt_project", "target_name": "dev", "node_id": "model.my_dbt_project.stg_product"} */
+
+
+  create or replace view `burnished-flare-384310`.`seQura_dbt`.`stg_product`
+  OPTIONS()
+  as 
+
+SELECT 
+    product_id,
+    product_name
+FROM `burnished-flare-384310`.`seQura_dbt`.`products`;
+
+
+[0m21:07:11.620678 [debug] [Thread-1  ]: On model.my_dbt_project.stg_dim_shoppers: /* {"app": "dbt", "dbt_version": "1.8.6", "profile_name": "my_dbt_project", "target_name": "dev", "node_id": "model.my_dbt_project.stg_dim_shoppers"} */
+
+
+  create or replace view `burnished-flare-384310`.`seQura_dbt`.`stg_dim_shoppers`
+  OPTIONS()
+  as 
+
+SELECT 
+    shopper_id,
+    age
+FROM `burnished-flare-384310`.`seQura_dbt`.`dim_shoppers`;
+
+
+[0m21:07:11.621141 [debug] [Thread-3  ]: On model.my_dbt_project.stg_orders: /* {"app": "dbt", "dbt_version": "1.8.6", "profile_name": "my_dbt_project", "target_name": "dev", "node_id": "model.my_dbt_project.stg_orders"} */
+
+
+  create or replace view `burnished-flare-384310`.`seQura_dbt`.`stg_orders`
+  OPTIONS()
+  as 
+
+WITH raw_orders AS (
+    SELECT 
+        order_id,
+        shopper_id,
+        order_date,
+        product_id,
+        merchant_id,
+        is_in_default,
+        days_unbalanced,
+        current_order_value,
+        overdue_principal,
+        overdue_fees
+    FROM `burnished-flare-384310`.`seQura_dbt`.`orders`
+)
+
+SELECT 
+    *,
+    overdue_principal + overdue_fees AS total_overdue 
+FROM raw_orders
+WHERE current_order_value IS NOT NULL;
+
+
+[0m21:07:12.120816 [debug] [Thread-1  ]: BigQuery adapter: https://console.cloud.google.com/bigquery?project=burnished-flare-384310&j=bq:EU:4e9e0d5b-cedd-4918-8586-3afbbee29f40&page=queryresults
+[0m21:07:12.125473 [debug] [Thread-3  ]: BigQuery adapter: https://console.cloud.google.com/bigquery?project=burnished-flare-384310&j=bq:EU:915d9ea2-828c-4b12-98c4-15d9592f666c&page=queryresults
+[0m21:07:12.143795 [debug] [Thread-2  ]: BigQuery adapter: https://console.cloud.google.com/bigquery?project=burnished-flare-384310&j=bq:EU:fce9f874-d598-4182-874a-9056b53ddf4d&page=queryresults
+[0m21:07:12.153996 [debug] [Thread-4  ]: BigQuery adapter: https://console.cloud.google.com/bigquery?project=burnished-flare-384310&j=bq:EU:49b98e8d-f167-4ba3-aaa4-cd01ace439f3&page=queryresults
+[0m21:07:12.484114 [debug] [Thread-4  ]: Sending event: {'category': 'dbt', 'action': 'run_model', 'label': '067c9b71-aba6-4d4d-ae08-9f9c77a61243', 'context': [<snowplow_tracker.self_describing_json.SelfDescribingJson object at 0x7f8058e1d520>]}
+[0m21:07:12.485109 [debug] [Thread-2  ]: Sending event: {'category': 'dbt', 'action': 'run_model', 'label': '067c9b71-aba6-4d4d-ae08-9f9c77a61243', 'context': [<snowplow_tracker.self_describing_json.SelfDescribingJson object at 0x7f8058e16fd0>]}
+[0m21:07:12.486476 [info ] [Thread-4  ]: 4 of 7 OK created sql view model seQura_dbt.stg_product ........................ [[32mCREATE VIEW (0 processed)[0m in 0.94s]
+[0m21:07:12.487112 [info ] [Thread-2  ]: 2 of 7 OK created sql view model seQura_dbt.stg_merchants ...................... [[32mCREATE VIEW (0 processed)[0m in 0.94s]
+[0m21:07:12.488006 [debug] [Thread-4  ]: Finished running node model.my_dbt_project.stg_product
+[0m21:07:12.488672 [debug] [Thread-2  ]: Finished running node model.my_dbt_project.stg_merchants
+[0m21:07:12.489211 [debug] [Thread-4  ]: Began running node model.my_dbt_project.stg_rel_default_order_type
+[0m21:07:12.490190 [info ] [Thread-4  ]: 5 of 7 START sql view model seQura_dbt.stg_rel_default_order_type .............. [RUN]
+[0m21:07:12.490802 [debug] [Thread-4  ]: Re-using an available connection from the pool (formerly model.my_dbt_project.stg_product, now model.my_dbt_project.stg_rel_default_order_type)
+[0m21:07:12.491270 [debug] [Thread-4  ]: Began compiling node model.my_dbt_project.stg_rel_default_order_type
+[0m21:07:12.494958 [debug] [Thread-4  ]: Writing injected SQL for node "model.my_dbt_project.stg_rel_default_order_type"
+[0m21:07:12.495760 [debug] [Thread-4  ]: Began executing node model.my_dbt_project.stg_rel_default_order_type
+[0m21:07:12.499092 [debug] [Thread-4  ]: Writing runtime sql for node "model.my_dbt_project.stg_rel_default_order_type"
+[0m21:07:12.499796 [debug] [Thread-4  ]: Opening a new connection, currently in state closed
+[0m21:07:12.502842 [debug] [Thread-3  ]: Sending event: {'category': 'dbt', 'action': 'run_model', 'label': '067c9b71-aba6-4d4d-ae08-9f9c77a61243', 'context': [<snowplow_tracker.self_describing_json.SelfDescribingJson object at 0x7f8058d5de50>]}
+[0m21:07:12.503478 [info ] [Thread-3  ]: 3 of 7 OK created sql view model seQura_dbt.stg_orders ......................... [[32mCREATE VIEW (0 processed)[0m in 0.96s]
+[0m21:07:12.504062 [debug] [Thread-3  ]: Finished running node model.my_dbt_project.stg_orders
+[0m21:07:12.509975 [debug] [Thread-4  ]: On model.my_dbt_project.stg_rel_default_order_type: /* {"app": "dbt", "dbt_version": "1.8.6", "profile_name": "my_dbt_project", "target_name": "dev", "node_id": "model.my_dbt_project.stg_rel_default_order_type"} */
+
+
+  create or replace view `burnished-flare-384310`.`seQura_dbt`.`stg_rel_default_order_type`
+  OPTIONS()
+  as 
+
+SELECT 
+    default_type_id,
+    order_id,
+    default_type
+FROM `burnished-flare-384310`.`seQura_dbt`.`rel_default_order_type`;
+
+
+[0m21:07:12.565057 [debug] [Thread-1  ]: Sending event: {'category': 'dbt', 'action': 'run_model', 'label': '067c9b71-aba6-4d4d-ae08-9f9c77a61243', 'context': [<snowplow_tracker.self_describing_json.SelfDescribingJson object at 0x7f8058e16d60>]}
+[0m21:07:12.565739 [info ] [Thread-1  ]: 1 of 7 OK created sql view model seQura_dbt.stg_dim_shoppers ................... [[32mCREATE VIEW (0 processed)[0m in 1.02s]
+[0m21:07:12.566345 [debug] [Thread-1  ]: Finished running node model.my_dbt_project.stg_dim_shoppers
+[0m21:07:13.050282 [debug] [Thread-4  ]: BigQuery adapter: https://console.cloud.google.com/bigquery?project=burnished-flare-384310&j=bq:EU:422f6fb4-4eb6-47c1-84ef-45ff4b2c989b&page=queryresults
+[0m21:07:13.383987 [debug] [Thread-4  ]: Sending event: {'category': 'dbt', 'action': 'run_model', 'label': '067c9b71-aba6-4d4d-ae08-9f9c77a61243', 'context': [<snowplow_tracker.self_describing_json.SelfDescribingJson object at 0x7f80699f3cd0>]}
+[0m21:07:13.385771 [info ] [Thread-4  ]: 5 of 7 OK created sql view model seQura_dbt.stg_rel_default_order_type ......... [[32mCREATE VIEW (0 processed)[0m in 0.89s]
+[0m21:07:13.387071 [debug] [Thread-4  ]: Finished running node model.my_dbt_project.stg_rel_default_order_type
+[0m21:07:13.388697 [debug] [Thread-2  ]: Began running node model.my_dbt_project.intermediate_loans_mora_analysis
+[0m21:07:13.390207 [info ] [Thread-2  ]: 6 of 7 START sql view model seQura_dbt.intermediate_loans_mora_analysis ........ [RUN]
+[0m21:07:13.391188 [debug] [Thread-2  ]: Re-using an available connection from the pool (formerly model.my_dbt_project.stg_merchants, now model.my_dbt_project.intermediate_loans_mora_analysis)
+[0m21:07:13.391882 [debug] [Thread-2  ]: Began compiling node model.my_dbt_project.intermediate_loans_mora_analysis
+[0m21:07:13.400026 [debug] [Thread-2  ]: Writing injected SQL for node "model.my_dbt_project.intermediate_loans_mora_analysis"
+[0m21:07:13.401157 [debug] [Thread-2  ]: Began executing node model.my_dbt_project.intermediate_loans_mora_analysis
+[0m21:07:13.405857 [debug] [Thread-2  ]: Writing runtime sql for node "model.my_dbt_project.intermediate_loans_mora_analysis"
+[0m21:07:13.406816 [debug] [Thread-2  ]: Opening a new connection, currently in state closed
+[0m21:07:13.416566 [debug] [Thread-2  ]: On model.my_dbt_project.intermediate_loans_mora_analysis: /* {"app": "dbt", "dbt_version": "1.8.6", "profile_name": "my_dbt_project", "target_name": "dev", "node_id": "model.my_dbt_project.intermediate_loans_mora_analysis"} */
+
+
+  create or replace view `burnished-flare-384310`.`seQura_dbt`.`intermediate_loans_mora_analysis`
+  OPTIONS()
+  as 
+
+WITH arrears_data AS (
+    -- Extraemos los datos necesarios de la tabla de orders
+    SELECT
+        o.order_id,
+        o.shopper_id,
+        s.age AS shopper_age, 
+        o.merchant_id,
+        m.merchant_name AS merchant,
+        p.product_name AS product,
+        r.default_type,
+        o.order_date,
+        FORMAT_DATE('%Y-%m', o.order_date) AS month_year_order,
+        o.current_order_value,
+        o.total_overdue,
+        o.days_unbalanced
+    FROM `burnished-flare-384310`.`seQura_dbt`.`stg_orders` o
+    LEFT JOIN `burnished-flare-384310`.`seQura_dbt`.`stg_dim_shoppers` s ON o.shopper_id = s.shopper_id
+    LEFT JOIN `burnished-flare-384310`.`seQura_dbt`.`stg_merchants` m ON o.merchant_id = m.merchant_id
+    LEFT JOIN `burnished-flare-384310`.`seQura_dbt`.`stg_product` p ON o.product_id = p.product_id
+    LEFT JOIN `burnished-flare-384310`.`seQura_dbt`.`stg_rel_default_order_type` r ON o.order_id = r.order_id
+    WHERE o.days_unbalanced >= 17  -- Solo consideramos órdenes con mora
+),
+
+expanded_periods AS (
+    -- Generamos una fila para cada `order_id` en función de sus niveles de mora
+    SELECT 
+        order_id,
+        shopper_id,
+        shopper_age,
+        merchant_id,
+        merchant,
+        product,
+        default_type,
+        order_date,
+        month_year_order,
+        current_order_value,
+        total_overdue,
+        days_unbalanced,
+        '17 days' AS delayed_period
+    FROM arrears_data
+    WHERE days_unbalanced >= 17
+
+    UNION ALL
+
+    SELECT 
+        order_id,
+        shopper_id,
+        shopper_age,
+        merchant_id,
+        merchant,
+        product,
+        default_type,
+        order_date,
+        month_year_order,
+        current_order_value,
+        total_overdue,
+        days_unbalanced,
+        '30 days' AS delayed_period
+    FROM arrears_data
+    WHERE days_unbalanced >= 30
+
+    UNION ALL
+
+    SELECT 
+        order_id,
+        shopper_id,
+        shopper_age,
+        merchant_id,
+        merchant,
+        product,
+        default_type,
+        order_date,
+        month_year_order,
+        current_order_value,
+        total_overdue,
+        days_unbalanced,
+        '60 days' AS delayed_period
+    FROM arrears_data
+    WHERE days_unbalanced >= 60
+
+    UNION ALL
+
+    SELECT 
+        order_id,
+        shopper_id,
+        shopper_age,
+        merchant_id,
+        merchant,
+        product,
+        default_type,
+        order_date,
+        month_year_order,
+        current_order_value,
+        total_overdue,
+        days_unbalanced,
+        '90 days' AS delayed_period
+    FROM arrears_data
+    WHERE days_unbalanced >= 90
+)
+
+SELECT 
+    order_id,
+    shopper_id,
+    shopper_age,
+    merchant_id,
+    merchant,
+    product,
+    default_type,
+    order_date,
+    month_year_order,
+    current_order_value,
+    total_overdue,
+    days_unbalanced,
+    delayed_period
+FROM expanded_periods
+ORDER BY order_id, delayed_period;
+
+
+[0m21:07:14.167532 [debug] [Thread-2  ]: BigQuery adapter: https://console.cloud.google.com/bigquery?project=burnished-flare-384310&j=bq:EU:38680b0a-089f-48d0-8b52-6ae9ba850609&page=queryresults
+[0m21:07:14.611296 [debug] [Thread-2  ]: Sending event: {'category': 'dbt', 'action': 'run_model', 'label': '067c9b71-aba6-4d4d-ae08-9f9c77a61243', 'context': [<snowplow_tracker.self_describing_json.SelfDescribingJson object at 0x7f80699f3cd0>]}
+[0m21:07:14.612996 [info ] [Thread-2  ]: 6 of 7 OK created sql view model seQura_dbt.intermediate_loans_mora_analysis ... [[32mCREATE VIEW (0 processed)[0m in 1.22s]
+[0m21:07:14.614323 [debug] [Thread-2  ]: Finished running node model.my_dbt_project.intermediate_loans_mora_analysis
+[0m21:07:14.616013 [debug] [Thread-1  ]: Began running node model.my_dbt_project.final_loans_mora_analysis
+[0m21:07:14.617023 [info ] [Thread-1  ]: 7 of 7 START sql view model seQura_dbt.final_loans_mora_analysis ............... [RUN]
+[0m21:07:14.617835 [debug] [Thread-1  ]: Re-using an available connection from the pool (formerly model.my_dbt_project.stg_dim_shoppers, now model.my_dbt_project.final_loans_mora_analysis)
+[0m21:07:14.618492 [debug] [Thread-1  ]: Began compiling node model.my_dbt_project.final_loans_mora_analysis
+[0m21:07:14.624657 [debug] [Thread-1  ]: Writing injected SQL for node "model.my_dbt_project.final_loans_mora_analysis"
+[0m21:07:14.625926 [debug] [Thread-1  ]: Began executing node model.my_dbt_project.final_loans_mora_analysis
+[0m21:07:14.632194 [debug] [Thread-1  ]: Writing runtime sql for node "model.my_dbt_project.final_loans_mora_analysis"
+[0m21:07:14.633196 [debug] [Thread-1  ]: Opening a new connection, currently in state closed
+[0m21:07:14.642476 [debug] [Thread-1  ]: On model.my_dbt_project.final_loans_mora_analysis: /* {"app": "dbt", "dbt_version": "1.8.6", "profile_name": "my_dbt_project", "target_name": "dev", "node_id": "model.my_dbt_project.final_loans_mora_analysis"} */
+
+
+  create or replace view `burnished-flare-384310`.`seQura_dbt`.`final_loans_mora_analysis`
+  OPTIONS()
+  as 
+
+SELECT 
+    shopper_age,
+    month_year_order,
+    product,
+    merchant,
+    default_type,
+    delayed_period
+FROM `burnished-flare-384310`.`seQura_dbt`.`intermediate_loans_mora_analysis`
+ORDER BY month_year_order, delayed_period;
+
+
+[0m21:07:15.361398 [debug] [Thread-1  ]: BigQuery adapter: https://console.cloud.google.com/bigquery?project=burnished-flare-384310&j=bq:EU:8e97a6a6-2691-42ca-89d6-d7c50b2cc239&page=queryresults
+[0m21:07:15.857881 [debug] [Thread-1  ]: Sending event: {'category': 'dbt', 'action': 'run_model', 'label': '067c9b71-aba6-4d4d-ae08-9f9c77a61243', 'context': [<snowplow_tracker.self_describing_json.SelfDescribingJson object at 0x7f80699f3cd0>]}
+[0m21:07:15.859592 [info ] [Thread-1  ]: 7 of 7 OK created sql view model seQura_dbt.final_loans_mora_analysis .......... [[32mCREATE VIEW (0 processed)[0m in 1.24s]
+[0m21:07:15.860794 [debug] [Thread-1  ]: Finished running node model.my_dbt_project.final_loans_mora_analysis
+[0m21:07:15.863116 [debug] [MainThread]: Connection 'master' was properly closed.
+[0m21:07:15.863761 [debug] [MainThread]: Connection 'model.my_dbt_project.final_loans_mora_analysis' was properly closed.
+[0m21:07:15.864249 [debug] [MainThread]: Connection 'model.my_dbt_project.intermediate_loans_mora_analysis' was properly closed.
+[0m21:07:15.864707 [debug] [MainThread]: Connection 'model.my_dbt_project.stg_orders' was properly closed.
+[0m21:07:15.865156 [debug] [MainThread]: Connection 'model.my_dbt_project.stg_rel_default_order_type' was properly closed.
+[0m21:07:15.865829 [info ] [MainThread]: 
+[0m21:07:15.866426 [info ] [MainThread]: Finished running 7 view models in 0 hours 0 minutes and 5.24 seconds (5.24s).
+[0m21:07:15.869128 [debug] [MainThread]: Command end result
+[0m21:07:15.911273 [info ] [MainThread]: 
+[0m21:07:15.911803 [info ] [MainThread]: [32mCompleted successfully[0m
+[0m21:07:15.912134 [info ] [MainThread]: 
+[0m21:07:15.912488 [info ] [MainThread]: Done. PASS=7 WARN=0 ERROR=0 SKIP=0 TOTAL=7
+[0m21:07:15.913042 [debug] [MainThread]: Resource report: {"command_name": "run", "command_success": true, "command_wall_clock_time": 7.1759906, "process_user_time": 3.46509, "process_kernel_time": 1.564455, "process_mem_max_rss": "235651072", "process_in_blocks": "0", "process_out_blocks": "0"}
+[0m21:07:15.913600 [debug] [MainThread]: Command `dbt run` succeeded at 21:07:15.913511 after 7.18 seconds
+[0m21:07:15.914009 [debug] [MainThread]: Sending event: {'category': 'dbt', 'action': 'invocation', 'label': 'end', 'context': [<snowplow_tracker.self_describing_json.SelfDescribingJson object at 0x7f8068ef0430>, <snowplow_tracker.self_describing_json.SelfDescribingJson object at 0x7f8058cfb040>, <snowplow_tracker.self_describing_json.SelfDescribingJson object at 0x7f806d14d1f0>]}
+[0m21:07:15.914375 [debug] [MainThread]: Flushing usage events
+[0m21:11:54.670616 [debug] [MainThread]: Sending event: {'category': 'dbt', 'action': 'invocation', 'label': 'start', 'context': [<snowplow_tracker.self_describing_json.SelfDescribingJson object at 0x7f9b78e6a520>, <snowplow_tracker.self_describing_json.SelfDescribingJson object at 0x7f9b7a58bdf0>, <snowplow_tracker.self_describing_json.SelfDescribingJson object at 0x7f9b7a58b430>]}
+
+
+============================== 21:11:54.673576 | 4b97f085-6b3c-4449-bf8c-f31f2ffa49e2 ==============================
+[0m21:11:54.673576 [info ] [MainThread]: Running with dbt=1.8.6
+[0m21:11:54.674193 [debug] [MainThread]: running dbt with arguments {'indirect_selection': 'eager', 'introspect': 'True', 'debug': 'False', 'quiet': 'False', 'warn_error_options': 'WarnErrorOptions(include=[], exclude=[])', 'use_colors': 'True', 'target_path': 'None', 'empty': 'False', 'partial_parse': 'True', 'warn_error': 'None', 'log_format': 'default', 'no_print': 'None', 'write_json': 'True', 'static_parser': 'True', 'send_anonymous_usage_stats': 'True', 'log_path': '/Users/raulvazquez/seQura_test/Part2/my_dbt_project/logs', 'fail_fast': 'False', 'version_check': 'True', 'use_experimental_parser': 'False', 'invocation_command': 'dbt run', 'profiles_dir': '/Users/raulvazquez/.dbt', 'cache_selected_only': 'False', 'log_cache_events': 'False', 'printer_width': '80'}
+[0m21:11:55.969011 [debug] [MainThread]: Sending event: {'category': 'dbt', 'action': 'project_id', 'label': '4b97f085-6b3c-4449-bf8c-f31f2ffa49e2', 'context': [<snowplow_tracker.self_describing_json.SelfDescribingJson object at 0x7f9b7a530d60>]}
+[0m21:11:56.006714 [debug] [MainThread]: Sending event: {'category': 'dbt', 'action': 'adapter_info', 'label': '4b97f085-6b3c-4449-bf8c-f31f2ffa49e2', 'context': [<snowplow_tracker.self_describing_json.SelfDescribingJson object at 0x7f9b5808c370>]}
+[0m21:11:56.007268 [info ] [MainThread]: Registered adapter: bigquery=1.8.2
+[0m21:11:56.040963 [debug] [MainThread]: checksum: 2f2fb10c73cafe3e79aa104295a8244291492b32b5598ce46af770f7d0bd5194, vars: {}, profile: , target: , version: 1.8.6
+[0m21:11:56.228292 [debug] [MainThread]: Partial parsing enabled: 0 files deleted, 0 files added, 1 files changed.
+[0m21:11:56.228925 [debug] [MainThread]: Partial parsing: updated file: my_dbt_project://models/final/final_loans_mora_analysis.sql
+[0m21:11:56.406800 [debug] [MainThread]: Sending event: {'category': 'dbt', 'action': 'load_project', 'label': '4b97f085-6b3c-4449-bf8c-f31f2ffa49e2', 'context': [<snowplow_tracker.self_describing_json.SelfDescribingJson object at 0x7f9b9920b130>]}
+[0m21:11:56.499129 [debug] [MainThread]: Sending event: {'category': 'dbt', 'action': 'resource_counts', 'label': '4b97f085-6b3c-4449-bf8c-f31f2ffa49e2', 'context': [<snowplow_tracker.self_describing_json.SelfDescribingJson object at 0x7f9b9923d730>]}
+[0m21:11:56.499665 [info ] [MainThread]: Found 7 models, 6 data tests, 5 sources, 473 macros
+[0m21:11:56.499966 [debug] [MainThread]: Sending event: {'category': 'dbt', 'action': 'runnable_timing', 'label': '4b97f085-6b3c-4449-bf8c-f31f2ffa49e2', 'context': [<snowplow_tracker.self_describing_json.SelfDescribingJson object at 0x7f9b991b8d30>]}
+[0m21:11:56.501417 [info ] [MainThread]: 
+[0m21:11:56.501988 [debug] [MainThread]: Acquiring new bigquery connection 'master'
+[0m21:11:56.505804 [debug] [ThreadPool]: Acquiring new bigquery connection 'list_burnished-flare-384310'
+[0m21:11:56.506250 [debug] [ThreadPool]: Opening a new connection, currently in state init
+[0m21:11:56.919192 [debug] [ThreadPool]: Re-using an available connection from the pool (formerly list_burnished-flare-384310, now list_burnished-flare-384310_seQura_dbt)
+[0m21:11:56.920240 [debug] [ThreadPool]: Opening a new connection, currently in state closed
+[0m21:11:57.305418 [debug] [MainThread]: Sending event: {'category': 'dbt', 'action': 'runnable_timing', 'label': '4b97f085-6b3c-4449-bf8c-f31f2ffa49e2', 'context': [<snowplow_tracker.self_describing_json.SelfDescribingJson object at 0x7f9b79082c10>]}
+[0m21:11:57.306131 [info ] [MainThread]: Concurrency: 4 threads (target='dev')
+[0m21:11:57.306460 [info ] [MainThread]: 
+[0m21:11:57.309398 [debug] [Thread-1  ]: Began running node model.my_dbt_project.stg_dim_shoppers
+[0m21:11:57.309911 [debug] [Thread-2  ]: Began running node model.my_dbt_project.stg_merchants
+[0m21:11:57.310489 [debug] [Thread-3  ]: Began running node model.my_dbt_project.stg_orders
+[0m21:11:57.311028 [info ] [Thread-1  ]: 1 of 7 START sql view model seQura_dbt.stg_dim_shoppers ........................ [RUN]
+[0m21:11:57.311460 [debug] [Thread-4  ]: Began running node model.my_dbt_project.stg_product
+[0m21:11:57.311935 [info ] [Thread-2  ]: 2 of 7 START sql view model seQura_dbt.stg_merchants ........................... [RUN]
+[0m21:11:57.312377 [info ] [Thread-3  ]: 3 of 7 START sql view model seQura_dbt.stg_orders .............................. [RUN]
+[0m21:11:57.312849 [debug] [Thread-1  ]: Re-using an available connection from the pool (formerly list_burnished-flare-384310_seQura_dbt, now model.my_dbt_project.stg_dim_shoppers)
+[0m21:11:57.313249 [info ] [Thread-4  ]: 4 of 7 START sql view model seQura_dbt.stg_product ............................. [RUN]
+[0m21:11:57.313721 [debug] [Thread-2  ]: Acquiring new bigquery connection 'model.my_dbt_project.stg_merchants'
+[0m21:11:57.314131 [debug] [Thread-3  ]: Acquiring new bigquery connection 'model.my_dbt_project.stg_orders'
+[0m21:11:57.314482 [debug] [Thread-1  ]: Began compiling node model.my_dbt_project.stg_dim_shoppers
+[0m21:11:57.314897 [debug] [Thread-4  ]: Acquiring new bigquery connection 'model.my_dbt_project.stg_product'
+[0m21:11:57.315430 [debug] [Thread-2  ]: Began compiling node model.my_dbt_project.stg_merchants
+[0m21:11:57.315927 [debug] [Thread-3  ]: Began compiling node model.my_dbt_project.stg_orders
+[0m21:11:57.323868 [debug] [Thread-1  ]: Writing injected SQL for node "model.my_dbt_project.stg_dim_shoppers"
+[0m21:11:57.324350 [debug] [Thread-4  ]: Began compiling node model.my_dbt_project.stg_product
+[0m21:11:57.327122 [debug] [Thread-2  ]: Writing injected SQL for node "model.my_dbt_project.stg_merchants"
+[0m21:11:57.333106 [debug] [Thread-3  ]: Writing injected SQL for node "model.my_dbt_project.stg_orders"
+[0m21:11:57.336382 [debug] [Thread-4  ]: Writing injected SQL for node "model.my_dbt_project.stg_product"
+[0m21:11:57.337354 [debug] [Thread-3  ]: Began executing node model.my_dbt_project.stg_orders
+[0m21:11:57.337719 [debug] [Thread-1  ]: Began executing node model.my_dbt_project.stg_dim_shoppers
+[0m21:11:57.350746 [debug] [Thread-2  ]: Began executing node model.my_dbt_project.stg_merchants
+[0m21:11:57.357665 [debug] [Thread-4  ]: Began executing node model.my_dbt_project.stg_product
+[0m21:11:57.362977 [debug] [Thread-3  ]: Writing runtime sql for node "model.my_dbt_project.stg_orders"
+[0m21:11:57.365495 [debug] [Thread-1  ]: Writing runtime sql for node "model.my_dbt_project.stg_dim_shoppers"
+[0m21:11:57.367834 [debug] [Thread-2  ]: Writing runtime sql for node "model.my_dbt_project.stg_merchants"
+[0m21:11:57.370091 [debug] [Thread-4  ]: Writing runtime sql for node "model.my_dbt_project.stg_product"
+[0m21:11:57.371045 [debug] [Thread-2  ]: Opening a new connection, currently in state init
+[0m21:11:57.371462 [debug] [Thread-1  ]: Opening a new connection, currently in state closed
+[0m21:11:57.371831 [debug] [Thread-3  ]: Opening a new connection, currently in state init
+[0m21:11:57.372595 [debug] [Thread-4  ]: Opening a new connection, currently in state init
+[0m21:11:57.378752 [debug] [Thread-2  ]: On model.my_dbt_project.stg_merchants: /* {"app": "dbt", "dbt_version": "1.8.6", "profile_name": "my_dbt_project", "target_name": "dev", "node_id": "model.my_dbt_project.stg_merchants"} */
+
+
+  create or replace view `burnished-flare-384310`.`seQura_dbt`.`stg_merchants`
+  OPTIONS()
+  as 
+
+SELECT 
+    merchant_id,
+    merchant_name
+FROM `burnished-flare-384310`.`seQura_dbt`.`merchants`;
+
+
+[0m21:11:57.379144 [debug] [Thread-1  ]: On model.my_dbt_project.stg_dim_shoppers: /* {"app": "dbt", "dbt_version": "1.8.6", "profile_name": "my_dbt_project", "target_name": "dev", "node_id": "model.my_dbt_project.stg_dim_shoppers"} */
+
+
+  create or replace view `burnished-flare-384310`.`seQura_dbt`.`stg_dim_shoppers`
+  OPTIONS()
+  as 
+
+SELECT 
+    shopper_id,
+    age
+FROM `burnished-flare-384310`.`seQura_dbt`.`dim_shoppers`;
+
+
+[0m21:11:57.379630 [debug] [Thread-4  ]: On model.my_dbt_project.stg_product: /* {"app": "dbt", "dbt_version": "1.8.6", "profile_name": "my_dbt_project", "target_name": "dev", "node_id": "model.my_dbt_project.stg_product"} */
+
+
+  create or replace view `burnished-flare-384310`.`seQura_dbt`.`stg_product`
+  OPTIONS()
+  as 
+
+SELECT 
+    product_id,
+    product_name
+FROM `burnished-flare-384310`.`seQura_dbt`.`products`;
+
+
+[0m21:11:57.380053 [debug] [Thread-3  ]: On model.my_dbt_project.stg_orders: /* {"app": "dbt", "dbt_version": "1.8.6", "profile_name": "my_dbt_project", "target_name": "dev", "node_id": "model.my_dbt_project.stg_orders"} */
+
+
+  create or replace view `burnished-flare-384310`.`seQura_dbt`.`stg_orders`
+  OPTIONS()
+  as 
+
+WITH raw_orders AS (
+    SELECT 
+        order_id,
+        shopper_id,
+        order_date,
+        product_id,
+        merchant_id,
+        is_in_default,
+        days_unbalanced,
+        current_order_value,
+        overdue_principal,
+        overdue_fees
+    FROM `burnished-flare-384310`.`seQura_dbt`.`orders`
+)
+
+SELECT 
+    *,
+    overdue_principal + overdue_fees AS total_overdue 
+FROM raw_orders
+WHERE current_order_value IS NOT NULL;
+
+
+[0m21:11:57.867949 [debug] [Thread-2  ]: BigQuery adapter: https://console.cloud.google.com/bigquery?project=burnished-flare-384310&j=bq:EU:b1c3cb29-1349-4bda-aa17-6f8087883191&page=queryresults
+[0m21:11:57.893537 [debug] [Thread-1  ]: BigQuery adapter: https://console.cloud.google.com/bigquery?project=burnished-flare-384310&j=bq:EU:1cbf0206-12db-4029-a594-9621dd053506&page=queryresults
+[0m21:11:57.994499 [debug] [Thread-4  ]: BigQuery adapter: https://console.cloud.google.com/bigquery?project=burnished-flare-384310&j=bq:EU:bc1f3580-08e4-4484-8660-8b6f7fc29de9&page=queryresults
+[0m21:11:57.996311 [debug] [Thread-3  ]: BigQuery adapter: https://console.cloud.google.com/bigquery?project=burnished-flare-384310&j=bq:EU:798d7334-a2b6-4153-bea2-951f7b554124&page=queryresults
+[0m21:11:58.366196 [debug] [Thread-2  ]: Sending event: {'category': 'dbt', 'action': 'run_model', 'label': '4b97f085-6b3c-4449-bf8c-f31f2ffa49e2', 'context': [<snowplow_tracker.self_describing_json.SelfDescribingJson object at 0x7f9b98efc580>]}
+[0m21:11:58.366942 [debug] [Thread-3  ]: Sending event: {'category': 'dbt', 'action': 'run_model', 'label': '4b97f085-6b3c-4449-bf8c-f31f2ffa49e2', 'context': [<snowplow_tracker.self_describing_json.SelfDescribingJson object at 0x7f9b79082c10>]}
+[0m21:11:58.368187 [info ] [Thread-2  ]: 2 of 7 OK created sql view model seQura_dbt.stg_merchants ...................... [[32mCREATE VIEW (0 processed)[0m in 1.05s]
+[0m21:11:58.368912 [info ] [Thread-3  ]: 3 of 7 OK created sql view model seQura_dbt.stg_orders ......................... [[32mCREATE VIEW (0 processed)[0m in 1.05s]
+[0m21:11:58.369583 [debug] [Thread-2  ]: Finished running node model.my_dbt_project.stg_merchants
+[0m21:11:58.370156 [debug] [Thread-3  ]: Finished running node model.my_dbt_project.stg_orders
+[0m21:11:58.370622 [debug] [Thread-2  ]: Began running node model.my_dbt_project.stg_rel_default_order_type
+[0m21:11:58.371271 [info ] [Thread-2  ]: 5 of 7 START sql view model seQura_dbt.stg_rel_default_order_type .............. [RUN]
+[0m21:11:58.371745 [debug] [Thread-2  ]: Re-using an available connection from the pool (formerly model.my_dbt_project.stg_merchants, now model.my_dbt_project.stg_rel_default_order_type)
+[0m21:11:58.372137 [debug] [Thread-2  ]: Began compiling node model.my_dbt_project.stg_rel_default_order_type
+[0m21:11:58.375580 [debug] [Thread-2  ]: Writing injected SQL for node "model.my_dbt_project.stg_rel_default_order_type"
+[0m21:11:58.376343 [debug] [Thread-2  ]: Began executing node model.my_dbt_project.stg_rel_default_order_type
+[0m21:11:58.379406 [debug] [Thread-2  ]: Writing runtime sql for node "model.my_dbt_project.stg_rel_default_order_type"
+[0m21:11:58.380105 [debug] [Thread-2  ]: Opening a new connection, currently in state closed
+[0m21:11:58.387640 [debug] [Thread-2  ]: On model.my_dbt_project.stg_rel_default_order_type: /* {"app": "dbt", "dbt_version": "1.8.6", "profile_name": "my_dbt_project", "target_name": "dev", "node_id": "model.my_dbt_project.stg_rel_default_order_type"} */
+
+
+  create or replace view `burnished-flare-384310`.`seQura_dbt`.`stg_rel_default_order_type`
+  OPTIONS()
+  as 
+
+SELECT 
+    default_type_id,
+    order_id,
+    default_type
+FROM `burnished-flare-384310`.`seQura_dbt`.`rel_default_order_type`;
+
+
+[0m21:11:58.518055 [debug] [Thread-4  ]: Sending event: {'category': 'dbt', 'action': 'run_model', 'label': '4b97f085-6b3c-4449-bf8c-f31f2ffa49e2', 'context': [<snowplow_tracker.self_describing_json.SelfDescribingJson object at 0x7f9b9933f7c0>]}
+[0m21:11:58.521887 [debug] [Thread-1  ]: Sending event: {'category': 'dbt', 'action': 'run_model', 'label': '4b97f085-6b3c-4449-bf8c-f31f2ffa49e2', 'context': [<snowplow_tracker.self_describing_json.SelfDescribingJson object at 0x7f9b99338c70>]}
+[0m21:11:58.522779 [info ] [Thread-4  ]: 4 of 7 OK created sql view model seQura_dbt.stg_product ........................ [[32mCREATE VIEW (0 processed)[0m in 1.20s]
+[0m21:11:58.523534 [info ] [Thread-1  ]: 1 of 7 OK created sql view model seQura_dbt.stg_dim_shoppers ................... [[32mCREATE VIEW (0 processed)[0m in 1.21s]
+[0m21:11:58.524759 [debug] [Thread-4  ]: Finished running node model.my_dbt_project.stg_product
+[0m21:11:58.525577 [debug] [Thread-1  ]: Finished running node model.my_dbt_project.stg_dim_shoppers
+[0m21:11:59.039517 [debug] [Thread-2  ]: BigQuery adapter: https://console.cloud.google.com/bigquery?project=burnished-flare-384310&j=bq:EU:22d4b810-4c5b-41bb-90fc-d005d9b91aa2&page=queryresults
+[0m21:11:59.374017 [debug] [Thread-2  ]: Sending event: {'category': 'dbt', 'action': 'run_model', 'label': '4b97f085-6b3c-4449-bf8c-f31f2ffa49e2', 'context': [<snowplow_tracker.self_describing_json.SelfDescribingJson object at 0x7f9b79082c10>]}
+[0m21:11:59.375707 [info ] [Thread-2  ]: 5 of 7 OK created sql view model seQura_dbt.stg_rel_default_order_type ......... [[32mCREATE VIEW (0 processed)[0m in 1.00s]
+[0m21:11:59.377007 [debug] [Thread-2  ]: Finished running node model.my_dbt_project.stg_rel_default_order_type
+[0m21:11:59.378857 [debug] [Thread-3  ]: Began running node model.my_dbt_project.intermediate_loans_mora_analysis
+[0m21:11:59.379998 [info ] [Thread-3  ]: 6 of 7 START sql view model seQura_dbt.intermediate_loans_mora_analysis ........ [RUN]
+[0m21:11:59.381215 [debug] [Thread-3  ]: Re-using an available connection from the pool (formerly model.my_dbt_project.stg_orders, now model.my_dbt_project.intermediate_loans_mora_analysis)
+[0m21:11:59.381958 [debug] [Thread-3  ]: Began compiling node model.my_dbt_project.intermediate_loans_mora_analysis
+[0m21:11:59.389810 [debug] [Thread-3  ]: Writing injected SQL for node "model.my_dbt_project.intermediate_loans_mora_analysis"
+[0m21:11:59.391183 [debug] [Thread-3  ]: Began executing node model.my_dbt_project.intermediate_loans_mora_analysis
+[0m21:11:59.396012 [debug] [Thread-3  ]: Writing runtime sql for node "model.my_dbt_project.intermediate_loans_mora_analysis"
+[0m21:11:59.396959 [debug] [Thread-3  ]: Opening a new connection, currently in state closed
+[0m21:11:59.406476 [debug] [Thread-3  ]: On model.my_dbt_project.intermediate_loans_mora_analysis: /* {"app": "dbt", "dbt_version": "1.8.6", "profile_name": "my_dbt_project", "target_name": "dev", "node_id": "model.my_dbt_project.intermediate_loans_mora_analysis"} */
+
+
+  create or replace view `burnished-flare-384310`.`seQura_dbt`.`intermediate_loans_mora_analysis`
+  OPTIONS()
+  as 
+
+WITH arrears_data AS (
+    -- Extraemos los datos necesarios de la tabla de orders
+    SELECT
+        o.order_id,
+        o.shopper_id,
+        s.age AS shopper_age, 
+        o.merchant_id,
+        m.merchant_name AS merchant,
+        p.product_name AS product,
+        r.default_type,
+        o.order_date,
+        FORMAT_DATE('%Y-%m', o.order_date) AS month_year_order,
+        o.current_order_value,
+        o.total_overdue,
+        o.days_unbalanced
+    FROM `burnished-flare-384310`.`seQura_dbt`.`stg_orders` o
+    LEFT JOIN `burnished-flare-384310`.`seQura_dbt`.`stg_dim_shoppers` s ON o.shopper_id = s.shopper_id
+    LEFT JOIN `burnished-flare-384310`.`seQura_dbt`.`stg_merchants` m ON o.merchant_id = m.merchant_id
+    LEFT JOIN `burnished-flare-384310`.`seQura_dbt`.`stg_product` p ON o.product_id = p.product_id
+    LEFT JOIN `burnished-flare-384310`.`seQura_dbt`.`stg_rel_default_order_type` r ON o.order_id = r.order_id
+    WHERE o.days_unbalanced >= 17  -- Solo consideramos órdenes con mora
+),
+
+expanded_periods AS (
+    -- Generamos una fila para cada `order_id` en función de sus niveles de mora
+    SELECT 
+        order_id,
+        shopper_id,
+        shopper_age,
+        merchant_id,
+        merchant,
+        product,
+        default_type,
+        order_date,
+        month_year_order,
+        current_order_value,
+        total_overdue,
+        days_unbalanced,
+        '17 days' AS delayed_period
+    FROM arrears_data
+    WHERE days_unbalanced >= 17
+
+    UNION ALL
+
+    SELECT 
+        order_id,
+        shopper_id,
+        shopper_age,
+        merchant_id,
+        merchant,
+        product,
+        default_type,
+        order_date,
+        month_year_order,
+        current_order_value,
+        total_overdue,
+        days_unbalanced,
+        '30 days' AS delayed_period
+    FROM arrears_data
+    WHERE days_unbalanced >= 30
+
+    UNION ALL
+
+    SELECT 
+        order_id,
+        shopper_id,
+        shopper_age,
+        merchant_id,
+        merchant,
+        product,
+        default_type,
+        order_date,
+        month_year_order,
+        current_order_value,
+        total_overdue,
+        days_unbalanced,
+        '60 days' AS delayed_period
+    FROM arrears_data
+    WHERE days_unbalanced >= 60
+
+    UNION ALL
+
+    SELECT 
+        order_id,
+        shopper_id,
+        shopper_age,
+        merchant_id,
+        merchant,
+        product,
+        default_type,
+        order_date,
+        month_year_order,
+        current_order_value,
+        total_overdue,
+        days_unbalanced,
+        '90 days' AS delayed_period
+    FROM arrears_data
+    WHERE days_unbalanced >= 90
+)
+
+SELECT 
+    order_id,
+    shopper_id,
+    shopper_age,
+    merchant_id,
+    merchant,
+    product,
+    default_type,
+    order_date,
+    month_year_order,
+    current_order_value,
+    total_overdue,
+    days_unbalanced,
+    delayed_period
+FROM expanded_periods
+ORDER BY order_id, delayed_period;
+
+
+[0m21:12:00.293065 [debug] [Thread-3  ]: BigQuery adapter: https://console.cloud.google.com/bigquery?project=burnished-flare-384310&j=bq:EU:ad3849ed-4ba2-4997-b804-f14b4901b70a&page=queryresults
+[0m21:12:00.620787 [debug] [Thread-3  ]: Sending event: {'category': 'dbt', 'action': 'run_model', 'label': '4b97f085-6b3c-4449-bf8c-f31f2ffa49e2', 'context': [<snowplow_tracker.self_describing_json.SelfDescribingJson object at 0x7f9b9923dc40>]}
+[0m21:12:00.622535 [info ] [Thread-3  ]: 6 of 7 OK created sql view model seQura_dbt.intermediate_loans_mora_analysis ... [[32mCREATE VIEW (0 processed)[0m in 1.24s]
+[0m21:12:00.623860 [debug] [Thread-3  ]: Finished running node model.my_dbt_project.intermediate_loans_mora_analysis
+[0m21:12:00.625437 [debug] [Thread-1  ]: Began running node model.my_dbt_project.final_loans_mora_analysis
+[0m21:12:00.626995 [info ] [Thread-1  ]: 7 of 7 START sql table model seQura_dbt.final_loans_mora_analysis .............. [RUN]
+[0m21:12:00.628219 [debug] [Thread-1  ]: Re-using an available connection from the pool (formerly model.my_dbt_project.stg_dim_shoppers, now model.my_dbt_project.final_loans_mora_analysis)
+[0m21:12:00.628924 [debug] [Thread-1  ]: Began compiling node model.my_dbt_project.final_loans_mora_analysis
+[0m21:12:00.636903 [debug] [Thread-1  ]: Writing injected SQL for node "model.my_dbt_project.final_loans_mora_analysis"
+[0m21:12:00.638405 [debug] [Thread-1  ]: Began executing node model.my_dbt_project.final_loans_mora_analysis
+[0m21:12:00.654046 [debug] [Thread-1  ]: Opening a new connection, currently in state closed
+[0m21:12:01.496799 [debug] [Thread-1  ]: Writing runtime sql for node "model.my_dbt_project.final_loans_mora_analysis"
+[0m21:12:01.498315 [debug] [Thread-1  ]: On model.my_dbt_project.final_loans_mora_analysis: /* {"app": "dbt", "dbt_version": "1.8.6", "profile_name": "my_dbt_project", "target_name": "dev", "node_id": "model.my_dbt_project.final_loans_mora_analysis"} */
+
+  
+    
+
+    create or replace table `burnished-flare-384310`.`seQura_dbt`.`final_loans_mora_analysis`
+      
+    
+    
+
+    OPTIONS()
+    as (
+      
+
+SELECT 
+    shopper_age,
+    month_year_order,
+    product,
+    merchant,
+    default_type,
+    delayed_period
+FROM `burnished-flare-384310`.`seQura_dbt`.`intermediate_loans_mora_analysis`
+ORDER BY month_year_order, delayed_period
+    );
+  
+[0m21:12:02.190898 [debug] [Thread-1  ]: BigQuery adapter: https://console.cloud.google.com/bigquery?project=burnished-flare-384310&j=bq:EU:203515ef-ea25-43f7-9bc8-d46255e8a6cb&page=queryresults
+[0m21:12:04.895442 [debug] [Thread-1  ]: Sending event: {'category': 'dbt', 'action': 'run_model', 'label': '4b97f085-6b3c-4449-bf8c-f31f2ffa49e2', 'context': [<snowplow_tracker.self_describing_json.SelfDescribingJson object at 0x7f9b8818ca60>]}
+[0m21:12:04.897071 [info ] [Thread-1  ]: 7 of 7 OK created sql table model seQura_dbt.final_loans_mora_analysis ......... [[32mCREATE TABLE (37.0 rows, 2.4 KiB processed)[0m in 4.27s]
+[0m21:12:04.898438 [debug] [Thread-1  ]: Finished running node model.my_dbt_project.final_loans_mora_analysis
+[0m21:12:04.900901 [debug] [MainThread]: Connection 'master' was properly closed.
+[0m21:12:04.901501 [debug] [MainThread]: Connection 'model.my_dbt_project.final_loans_mora_analysis' was properly closed.
+[0m21:12:04.901960 [debug] [MainThread]: Connection 'model.my_dbt_project.stg_rel_default_order_type' was properly closed.
+[0m21:12:04.902403 [debug] [MainThread]: Connection 'model.my_dbt_project.intermediate_loans_mora_analysis' was properly closed.
+[0m21:12:04.902841 [debug] [MainThread]: Connection 'model.my_dbt_project.stg_product' was properly closed.
+[0m21:12:04.903508 [info ] [MainThread]: 
+[0m21:12:04.904095 [info ] [MainThread]: Finished running 6 view models, 1 table model in 0 hours 0 minutes and 8.40 seconds (8.40s).
+[0m21:12:04.906723 [debug] [MainThread]: Command end result
+[0m21:12:04.949646 [info ] [MainThread]: 
+[0m21:12:04.950238 [info ] [MainThread]: [32mCompleted successfully[0m
+[0m21:12:04.950574 [info ] [MainThread]: 
+[0m21:12:04.950933 [info ] [MainThread]: Done. PASS=7 WARN=0 ERROR=0 SKIP=0 TOTAL=7
+[0m21:12:04.951469 [debug] [MainThread]: Resource report: {"command_name": "run", "command_success": true, "command_wall_clock_time": 10.3709755, "process_user_time": 3.616633, "process_kernel_time": 1.553152, "process_mem_max_rss": "236269568", "process_in_blocks": "0", "process_out_blocks": "0"}
+[0m21:12:04.952200 [debug] [MainThread]: Command `dbt run` succeeded at 21:12:04.952082 after 10.37 seconds
+[0m21:12:04.952594 [debug] [MainThread]: Sending event: {'category': 'dbt', 'action': 'invocation', 'label': 'end', 'context': [<snowplow_tracker.self_describing_json.SelfDescribingJson object at 0x7f9b78e6a520>, <snowplow_tracker.self_describing_json.SelfDescribingJson object at 0x7f9b881eb880>, <snowplow_tracker.self_describing_json.SelfDescribingJson object at 0x7f9b5808c370>]}
+[0m21:12:04.952935 [debug] [MainThread]: Flushing usage events
